@@ -1,0 +1,8 @@
+{   
+    "presets": [
+        //Preset para poder utilizar las ultimas tendencias de JS
+        "@babel/preset-env",
+        //Preset para entender REACT.JS
+        "@babel/preset-react"    
+        ]
+}
