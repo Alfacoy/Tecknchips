@@ -17,7 +17,7 @@ module.exports = {
     },
     plugins: [
         new HmtlWebpackPlugin({
-            template: './index.html'
+            template: './template.html'
         }),
         new MiniCssExtractPlugin({
             filename: 'css/main.css'

@@ -16,7 +16,7 @@ module.exports = {
     },
     plugins: [
         new HmtlWebpackPlugin({
-            template: './index.html'
+            template: './template.html'
         })
     ],
     devServer: {
