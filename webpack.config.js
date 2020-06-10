@@ -3,20 +3,21 @@ const HmtlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname,'src/js/index.js'),
+    entry: 'src/js/index.js',
     output: {
-        filename: 'js/main.js'
+        filename: 'js/main.js',
+        path: path.resolve(__dirname, './dist')
     },
     module: {
-        rules: 
-        [
-            {test: /\.js$/,exclude: /node_modules/,loader: "babel-loader"},
-            {test: /\.s[ac]ss$/i,use: ['style-loader','css-loader','sass-loader']}   
-        ]
+        rules:
+            [
+                { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+                { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] }
+            ]
     },
     plugins: [
         new HmtlWebpackPlugin({
-            template: './template.html'
+            template: './index.html'
         })
     ],
     devServer: {
